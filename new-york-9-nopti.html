@@ -1,89 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ro">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>New York 2027 · 9 nopți · 11–20 septembrie</title>
 <style>
 :root{
-  --ink:#183153;--teal:#2f6b78;--sand:#f7f1e8;--pale:#eef4f6;
-  --muted:#667085;--bg:#f6f7f9;--card:#fff;--line:#d8dee6;
+  --ink:#102a43; --ink-2:#163a59; --teal:#1f6f78; --teal-2:#368c91;
+  --sand:#f3eadf; --gold:#b78a55; --pale:#eef6f7; --mist:#f3f6f8;
+  --muted:#64748b; --bg:#f4f6f8; --card:#ffffff; --line:#d9e1e8;
+  --shadow:0 12px 34px rgba(15,42,67,.08); --radius:22px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:#20252b;line-height:1.55}
-a{color:#145d77;text-decoration:none}
-a:hover{text-decoration:underline}
-.hero{background:linear-gradient(135deg,#163150 0%,#2f6b78 60%,#7c6656 100%);color:white;padding:58px 18px 42px}
-.wrap{max-width:1050px;margin:0 auto}
-.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;opacity:.82;font-weight:700}
-h1{font-size:clamp(2.2rem,7vw,4.9rem);margin:.3rem 0;line-height:1.02}
-.subtitle{font-size:clamp(1.03rem,2.1vw,1.32rem);max-width:850px;opacity:.94}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
-.metric{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:14px}
-.metric b{display:block;font-size:.82rem;opacity:.78}.metric span{font-size:1.05rem;font-weight:700}
-.sticky{position:sticky;top:0;z-index:10;background:rgba(246,247,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{max-width:1050px;margin:auto;display:flex;gap:14px;overflow:auto;padding:12px 16px;white-space:nowrap}
-main{padding:26px 16px 64px}
-section{margin:20px 0 38px}
-h2{color:var(--ink);font-size:clamp(1.55rem,3vw,2.2rem);margin-bottom:14px}
-h3{margin:.2rem 0;color:var(--ink)}
-.callout{background:var(--sand);border-left:5px solid #b28658;padding:15px 17px;border-radius:0 14px 14px 0}
-.overview{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.card,.day{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(16,36,55,.06)}
-.day{margin:14px 0}
-.day-head{display:flex;gap:14px;align-items:flex-start;justify-content:space-between}
-.badge{min-width:110px;text-align:center;background:var(--pale);color:var(--ink);padding:9px 10px;border-radius:12px;font-weight:800}
-.time{font-weight:700;color:var(--teal)}
-ul{padding-left:1.2rem}
-.budget{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.budget div{background:white;border:1px solid var(--line);border-radius:12px;padding:12px}
-.footer{text-align:center;color:var(--muted);padding:28px 16px 48px}
-.small{color:var(--muted);font-size:.94rem}
-@media(max-width:760px){
-  .metrics{grid-template-columns:1fr 1fr}
-  .overview,.budget{grid-template-columns:1fr}
-  .hero{padding-top:42px}
-  .day-head{flex-direction:column}
-  .badge{text-align:left}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-width:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(#f7f8fa,#f2f5f7);color:#20262d;line-height:1.6;overflow-x:hidden}
+a{color:#0f6074;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,summary:focus-visible{outline:3px solid rgba(31,111,120,.28);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1120px,calc(100% - 32px));margin-inline:auto;min-width:0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0e253d 0%,#1f5868 56%,#735f52 100%);color:white;padding:68px 0 48px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.14),transparent 30%),linear-gradient(90deg,transparent 0 66%,rgba(255,255,255,.04) 66% 67%,transparent 67% 71%,rgba(255,255,255,.05) 71% 73%,transparent 73%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;opacity:.82;font-weight:800}
+h1{font-size:clamp(2.45rem,7vw,5rem);margin:.28rem 0 .6rem;line-height:1.01;letter-spacing:-.035em;max-width:900px}
+.subtitle{font-size:clamp(1.03rem,2.1vw,1.34rem);max-width:860px;opacity:.95}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:30px}
+.metric{min-width:0;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:15px 16px;backdrop-filter:blur(4px)}
+.metric b{display:block;font-size:.77rem;letter-spacing:.04em;text-transform:uppercase;opacity:.76}.metric span{display:block;font-size:1.04rem;font-weight:800;overflow-wrap:anywhere}
+.sticky{position:sticky;top:0;z-index:20;background:rgba(247,249,250,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,225,232,.92)}
+.nav{width:min(1120px,100%);margin:auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;min-height:42px;padding:8px 11px;border-radius:999px;font-size:.93rem;font-weight:750;color:var(--ink);text-decoration:none}.nav a:hover{background:#e9f1f3}
+main{padding:28px 0 70px;min-width:0}
+section{margin:22px 0 42px;scroll-margin-top:76px}
+h2{color:var(--ink);font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-.02em;margin:0 0 15px}h3{margin:.15rem 0;color:var(--ink);line-height:1.25}
+p,li{overflow-wrap:anywhere}
+.callout{background:linear-gradient(135deg,#f7efe5,#f4eadf);border-left:5px solid var(--gold);padding:16px 18px;border-radius:0 16px 16px 0;box-shadow:0 5px 18px rgba(80,65,45,.04)}
+.quick-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+.quick-link{display:flex;align-items:center;gap:10px;min-height:54px;padding:11px 13px;background:#fff;border:1px solid var(--line);border-radius:15px;color:var(--ink);font-weight:750;text-decoration:none;box-shadow:0 5px 15px rgba(15,42,67,.04)}
+.quick-link:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(15,42,67,.08);text-decoration:none}.quick-link span:first-child{font-size:1.18rem}
+.day-jump{display:flex;gap:8px;overflow-x:auto;padding:3px 1px 10px;margin:0 0 12px;scrollbar-width:none}.day-jump::-webkit-scrollbar{display:none}
+.day-jump a{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-width:46px;min-height:42px;padding:7px 11px;border-radius:12px;background:#eaf2f4;border:1px solid #d6e5e8;color:var(--ink);font-weight:800;text-decoration:none}
+.day-jump a:hover{background:#dcebed}
+.overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card,.day{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.day{position:relative;margin:15px 0;border-top:4px solid #4a8390;scroll-margin-top:76px}
+.day:before{content:"";position:absolute;inset:0 0 auto 0;height:42px;background:linear-gradient(90deg,rgba(47,107,120,.045),transparent);border-radius:18px 18px 0 0;pointer-events:none}
+.day-head{position:relative;display:flex;gap:16px;align-items:flex-start;justify-content:space-between}.day-head>div:first-child{min-width:0}.day-head p{margin:.3rem 0 0;color:var(--muted);font-weight:650}
+.badge{flex:0 0 auto;max-width:190px;text-align:center;background:var(--pale);border:1px solid #d6e9eb;color:var(--ink);padding:9px 11px;border-radius:12px;font-weight:850;font-size:.9rem}
+.time{font-weight:800;color:var(--teal)}
+ul{padding-left:1.25rem;margin-bottom:1rem}li+li{margin-top:.38rem}
+.text-link{font-weight:750}
+.day-notes{margin-top:18px;border-top:1px solid var(--line);padding-top:13px}
+.day-notes summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;min-height:44px;color:var(--ink);font-weight:850;user-select:none}.day-notes summary::-webkit-details-marker{display:none}.day-notes summary:before{content:"＋";display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:#eaf2f4;color:var(--teal);font-size:1.05rem}.day-notes[open] summary:before{content:"−"}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:12px}
+.story{min-width:0;background:linear-gradient(180deg,#fbfcfd,#f8fafb);border:1px solid var(--line);border-radius:16px;padding:15px}.story h4{margin:0 0 7px;color:var(--ink);font-size:1rem}.story p{margin:0;color:#475569;font-size:.95rem}.story .actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:39px;padding:7px 10px;border-radius:10px;background:#edf5f6;border:1px solid #d5e7e9;color:#0e5c69;font-size:.88rem;font-weight:800;text-decoration:none}.btn:hover{background:#e1eff1;text-decoration:none}.btn.secondary{background:#fff;border-color:var(--line);color:var(--ink)}
+.budget{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.budget div{min-width:0;background:white;border:1px solid var(--line);border-radius:14px;padding:13px;box-shadow:0 4px 14px rgba(15,42,67,.035)}
+.footer{text-align:center;color:var(--muted);padding:30px 16px 50px}.small{color:var(--muted);font-size:.93rem}.section-kicker{margin:-8px 0 14px;color:var(--muted)}
+@media(max-width:900px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-links,.budget{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+  .wrap{width:min(100% - 22px,1120px)}.hero{padding:48px 0 36px}.metrics,.overview,.quick-links,.budget,.story-grid{grid-template-columns:1fr}.metric{padding:13px}.nav{padding-inline:10px}.nav a{font-size:.89rem}.day{padding:17px 15px;border-radius:18px}.day-head{flex-direction:column;gap:8px}.badge{max-width:100%;text-align:left}.story{padding:13px}.story .actions{display:grid;grid-template-columns:1fr 1fr}.btn{min-height:44px}.callout{padding:14px 15px}h1{font-size:clamp(2.25rem,14vw,3.6rem)}
 }
+@media(max-width:390px){.story .actions{grid-template-columns:1fr}.quick-link{font-size:.94rem}.nav a{padding-inline:9px}}
+@media print{.sticky{position:static}.day{break-inside:avoid;box-shadow:none}.day-notes{display:block}.day-notes .story-grid{display:grid}.nav,.quick-links{display:none}body{background:#fff}.hero{background:#fff;color:#111;padding:20px 0}.metric{border-color:#ccc;color:#111}}
 </style>
-</head>
+<meta content="#102a43" name="theme-color"/></head>
 <body>
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Cristi &amp; Mihaela · New York 2027</div>
-    <h1>New York, în ritmul nostru</h1>
-    <div class="subtitle">11–20 septembrie 2027 · 9 nopți. Greenwich Village, sudul Manhattanului, Brooklyn rezidențial, The Met Cloisters și Intrepid Museum, cu pauza de după-amiază păstrată.</div>
-    <div class="metrics">
-      <div class="metric"><b>Durată</b><span>9 nopți</span></div>
-      <div class="metric"><b>Ritm</b><span>≤ 9.000 pași / zi</span></div>
-      <div class="metric"><b>Bază</b><span>Village / Chelsea</span></div>
-      <div class="metric"><b>Buget</b><span>≈ 9.350 €</span></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="eyebrow">Cristi &amp; Mihaela · New York 2027</div>
+<h1>New York, în ritmul nostru</h1>
+<div class="subtitle">11–20 septembrie 2027 · 9 nopți. Greenwich Village, sudul Manhattanului, Brooklyn rezidențial, The Met Cloisters și Intrepid Museum, cu pauza de după-amiază păstrată.</div>
+<div class="metrics">
+<div class="metric"><b>Durată</b><span>9 nopți</span></div>
+<div class="metric"><b>Ritm</b><span>≤ 9.000 pași / zi</span></div>
+<div class="metric"><b>Bază</b><span>Village / Chelsea</span></div>
+<div class="metric"><b>Buget</b><span>≈ 9.420 €</span></div>
+</div>
+</div>
 </header>
-
-<div class="sticky"><nav class="nav">
-  <a href="#idee">Ideea călătoriei</a>
-  <a href="#program">Program</a>
-  <a href="#buget">Buget</a>
-  <a href="#verificari">De verificat</a>
-</nav></div>
-
+<div class="sticky"><nav class="nav"><a href="index.html">← Variante</a>
+<a href="#idee">Ideea călătoriei</a>
+<a href="#program">Program</a>
+<a href="#buget">Buget</a>
+<a href="#verificari">De verificat</a>
+<a href="new-york-7-nopti.html">7 nopți</a></nav></div>
 <main class="wrap">
 <section id="idee">
-  <h2>Un oraș trăit, nu bifat</h2>
-  <div class="callout">În fiecare zi există un singur nucleu de vizitare, o pauză reală la hotel și libertatea de a renunța la sugestiile de seară.</div>
-  <p><b>Cazare:</b> preferabil Greenwich Village / nordul West Village, la maximum 5–7 minute de W 4 St–Washington Sq; alternativ, Chelsea sudică.</p>
-  <p><b>Mers:</b> plafon 9.000 de pași/zi; traseele vizează în general 5.000–8.000.</p>
-  <p><b>Nu se repetă:</b> Met Fifth Avenue, MoMA, Brooklyn Bridge, DUMBO și Brooklyn Heights.</p>
-</section>
+<h2>Un oraș trăit, nu bifat</h2>
+<div class="callout">În fiecare zi există un singur nucleu de vizitare, o pauză reală la hotel și libertatea de a renunța la sugestiile de seară.</div>
+<p><b>Cazare:</b> preferabil Greenwich Village / nordul West Village, la maximum 5–7 minute de W 4 St–Washington Sq; alternativ, Chelsea sudică.</p>
+<p><b>Mers:</b> plafon 9.000 de pași/zi; traseele vizează în general 5.000–8.000.</p>
+<p><b>Nu se repetă:</b> Met Fifth Avenue, MoMA, Brooklyn Bridge, DUMBO și Brooklyn Heights.</p>
 
+<div aria-label="Linkuri utile" class="quick-links">
+<a class="quick-link" href="https://www.mta.info/maps" rel="noopener" target="_blank"><span>🚇</span><span>Harta oficială MTA ↗</span></a>
+<a class="quick-link" href="https://www.broadway.org/shows" rel="noopener" target="_blank"><span>🎭</span><span>Broadway.org ↗</span></a>
+<a class="quick-link" href="https://www.nyc.gov/site/tlc/passengers/taxi-fare.page" rel="noopener" target="_blank"><span>🚕</span><span>Taxi JFK · tarife oficiale ↗</span></a>
+<a class="quick-link" href="https://www.google.com/maps/search/?api=1&amp;query=New+York+City" rel="noopener" target="_blank"><span>🗺️</span><span>Google Maps · New York ↗</span></a>
+</div></section>
 <section id="program">
-<h2>Program pe zile</h2>
-
-<article class="day">
+<h2>Program pe zile</h2><div aria-label="Navigare rapidă pe zile" class="day-jump"><a href="#zi-11">11 sep</a><a href="#zi-12">12 sep</a><a href="#zi-13">13 sep</a><a href="#zi-14">14 sep</a><a href="#zi-15">15 sep</a><a href="#zi-16">16 sep</a><a href="#zi-17">17 sep</a><a href="#zi-18">18 sep</a><a href="#zi-19">19 sep</a><a href="#zi-20">20 sep</a></div>
+<article class="day" id="zi-11">
 <div class="day-head"><div><h3>Sâmbătă, 11 septembrie</h3><p>Sosire</p></div><div class="badge">2.000–4.000 pași</div></div>
 <ul>
 <li><span class="time">Transfer</span> — JFK → hotel cu taxiul, aproximativ 45–75 min.</li>
@@ -92,44 +111,40 @@ ul{padding-left:1.2rem}
 <li><span class="time">Seara</span> — cină aproape de hotel; eventual 20–30 min prin cartier.</li>
 </ul>
 <p class="small">Nu planificăm Lower Manhattan în ziua sosirii, fiind 11 septembrie.</p>
-</article>
-
-<article class="day">
+<details class="day-notes"><summary>Informație practică</summary><div class="story-grid"><div class="story"><h4>✈️ Zi de transfer</h4><p>Nu adăugăm obiective. Păstrăm marjă pentru trafic, bagaje și formalități; tariful oficial pentru taxi între JFK și Manhattan trebuie verificat înainte de plecare.</p><div class="actions"><a class="btn" href="https://www.nyc.gov/site/tlc/passengers/taxi-fare.page" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=John+F+Kennedy+International+Airport" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-12">
 <div class="day-head"><div><h3>Duminică, 12 septembrie</h3><p>Greenwich Village și West Village</p></div><div class="badge">5.500–7.500 pași</div></div>
 <ul>
-<li><span class="time">09:45–11:00</span> — Washington Square Park, Washington Mews și străzi din jur.</li>
+<li><span class="time">09:45–11:00</span> — <a class="text-link" href="https://www.nycgovparks.org/parks/washington-square-park" rel="noopener" target="_blank">Washington Square Park</a>, Washington Mews și străzi din jur.</li>
 <li><span class="time">11:00–12:30</span> — Bleecker, Grove și Bedford Street, cu oprire la cafea.</li>
 <li><span class="time">12:30–13:30</span> — prânz în Village.</li>
 <li><span class="time">14:00–16:45</span> — pauză la hotel.</li>
-<li><span class="time">17:15–18:15, opțional</span> — Pier 45 pentru Hudson și stat pe bancă.</li>
+<li><span class="time">17:15–18:15, opțional</span> — <a class="text-link" href="https://hudsonriverpark.org/locations/pier-45/" rel="noopener" target="_blank">Pier 45</a> pentru Hudson și stat pe bancă.</li>
 <li><span class="time">19:00</span> — cină în West Village sau lângă hotel.</li>
 </ul>
-</article>
-
-<article class="day">
-<div class="day-head"><div><h3>Luni, 13 septembrie</h3><p>The Frick Collection</p></div><div class="badge">5.000–6.500 pași</div></div>
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🌳 Washington Square Park</h4><p>A trecut prin roluri foarte diferite — de la teren mlăștinos și cimitir la spațiu de paradă și, apoi, piață civică. Arcul de marmură proiectat de Stanford White a fost dedicat în 1895. Merită observată axa Fifth Avenue–arc–fântână și viața stradală din jur.</p><div class="actions"><a class="btn" href="https://www.nycgovparks.org/parks/washington-square-park" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Washington+Square+Park+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🏘️ West Village</h4><p>Aici farmecul vine mai ales din scară: străzi neregulate, case joase, fațade de cărămidă, trepte „stoop” și colțuri care nu urmează perfect grila Manhattanului. Bleecker, Grove și Bedford sunt mai importante ca atmosferă decât ca obiective izolate.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Bleecker+Street+Grove+Street+Bedford+Street+West+Village+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🌅 Pier 45</h4><p>Pontoonul de 900 de picioare din Hudson River Park are promenadă, gazon și zone de stat. Este una dintre opririle bune pentru apus fără să transformi seara într-un alt „obiectiv”.</p><div class="actions"><a class="btn" href="https://hudsonriverpark.org/locations/pier-45/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Pier+45+Hudson+River+Park+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-13">
+<div class="day-head"><div><h3>Luni, 13 septembrie</h3><p><a class="text-link" href="https://www.frick.org/" rel="noopener" target="_blank">The Frick Collection</a></p></div><div class="badge">5.000–6.500 pași</div></div>
 <ul>
 <li><span class="time">09:45–10:25</span> — transfer hotel → Frick.</li>
-<li><span class="time">10:30–12:30</span> — The Frick Collection.</li>
+<li><span class="time">10:30–12:30</span> — <a class="text-link" href="https://www.frick.org/" rel="noopener" target="_blank">The Frick Collection</a>.</li>
 <li><span class="time">12:30–13:30</span> — prânz în apropiere.</li>
 <li><span class="time">14:10–16:45</span> — pauză la hotel.</li>
-<li><span class="time">Seara, liberă</span> — cină aproape de hotel; opțional Washington Square sau Village Vanguard.</li>
+<li><span class="time">Seara, liberă</span> — cină aproape de hotel; opțional Washington Square sau <a class="text-link" href="https://villagevanguard.com/" rel="noopener" target="_blank">Village Vanguard</a>.</li>
 </ul>
-</article>
-
-<article class="day">
-<div class="day-head"><div><h3>Marți, 14 septembrie</h3><p>SoHo, Nolita și Broadway</p></div><div class="badge">6.000–8.000 pași</div></div>
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🖼️ The Frick Collection</h4><p>Muzeul pornește din casa și colecția industriașului Henry Clay Frick. Reședința de pe Fifth Avenue a fost comandată în 1913, iar muzeul s-a deschis publicului în 1935. Particularitatea lui este întâlnirea cu mari opere europene într-un cadru de casă Gilded Age, nu într-o galerie monumentală.</p><div class="actions"><a class="btn" href="https://www.frick.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=The+Frick+Collection+1+East+70th+Street+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🎷 Village Vanguard</h4><p>Clubul funcționează în subsolul de la 178 Seventh Avenue South din 1935 și este unul dintre reperele esențiale ale jazzului new-yorkez. Dacă alegi o seară aici, experiența este mai degrabă intimă decât „de spectacol mare”.</p><div class="actions"><a class="btn" href="https://villagevanguard.com/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Village+Vanguard+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-14">
+<div class="day-head"><div><h3>Marți, 14 septembrie</h3><p>SoHo, Nolita și <a class="text-link" href="https://www.broadway.org/shows" rel="noopener" target="_blank">Broadway</a></p></div><div class="badge">6.000–8.000 pași</div></div>
 <ul>
 <li><span class="time">10:00–11:15</span> — SoHo: Greene Street și Spring Street.</li>
 <li><span class="time">11:15–12:30</span> — Nolita: Prince Street și Elizabeth Street.</li>
 <li><span class="time">12:30–13:30</span> — prânz în Nolita.</li>
 <li><span class="time">14:00–16:50</span> — pauză la hotel.</li>
 <li><span class="time">17:30–18:30</span> — cină în Hell’s Kitchen.</li>
-<li><span class="time">19:00–~21:30</span> — Broadway; titlul și ora exactă se stabilesc ulterior.</li>
+<li><span class="time">19:00–~21:30</span> — <a class="text-link" href="https://www.broadway.org/shows" rel="noopener" target="_blank">Broadway</a>; titlul și ora exactă se stabilesc ulterior.</li>
 </ul>
-</article>
-
-<article class="day">
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🏙️ SoHo</h4><p>SoHo este definit de clădirile sale comerciale din secolul al XIX-lea, multe cu fațade din fontă, transformate ulterior în lofturi, galerii și magazine. Pe Greene Street merită să ridici privirea la fațade, coloane și ferestre, nu doar la vitrine.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Greene+Street+and+Spring+Street+SoHo+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>☕ Nolita</h4><p>„North of Little Italy” are o scară mai mică și mai domestică decât SoHo: blocuri joase, vechi tenements, cafenele și magazine independente. Prince și Elizabeth Street sunt potrivite pentru o plimbare fără țintă rigidă.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Prince+Street+Elizabeth+Street+Nolita+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🎭 Broadway</h4><p>Pentru 2027, titlul spectacolului poate fi ales când se stabilizează programul sezonului. Broadway.org, al Broadway League, este un reper bun pentru lista spectacolelor, teatre și informații despre bilete.</p><div class="actions"><a class="btn" href="https://www.broadway.org/shows" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Times+Square+Broadway+Theatre+District+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-15">
 <div class="day-head"><div><h3>Miercuri, 15 septembrie</h3><p>Brooklyn de cartier</p></div><div class="badge">6.000–8.000 pași</div></div>
 <ul>
 <li><span class="time">09:30–10:00</span> — metrou F până la Bergen Street.</li>
@@ -137,84 +152,77 @@ ul{padding-left:1.2rem}
 <li><span class="time">11:30–12:30</span> — Carroll Gardens.</li>
 <li><span class="time">12:30–13:30</span> — prânz în Carroll Gardens.</li>
 <li><span class="time">14:30–17:30</span> — pauză la hotel.</li>
-<li><span class="time">Seara, opțional</span> — Village Vanguard, dacă energia și programul se potrivesc.</li>
+<li><span class="time">Seara, opțional</span> — <a class="text-link" href="https://villagevanguard.com/" rel="noopener" target="_blank">Village Vanguard</a>, dacă energia și programul se potrivesc.</li>
 </ul>
-</article>
-
-<article class="day">
-<div class="day-head"><div><h3>Joi, 16 septembrie</h3><p>Tenement Museum, Katz’s, Chinatown și Ferrara</p></div><div class="badge">5.500–7.000 pași</div></div>
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🏘️ Cobble Hill</h4><p>Un Brooklyn rezidențial de brownstone-uri, străzi cu arbori și fronturi comerciale de cartier. Merită urmărite detaliile caselor și ritmul străzii, nu o listă de monumente.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Cobble+Hill+Brooklyn+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🌿 Carroll Gardens</h4><p>Cartierul păstrează multe case cu retrageri neobișnuit de generoase față de trotuar, de unde și senzația de mici grădini frontale. Este o continuare firească a plimbării prin Brooklyn „locuit”.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Carroll+Gardens+Brooklyn+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-16">
+<div class="day-head"><div><h3>Joi, 16 septembrie</h3><p><a class="text-link" href="https://www.tenement.org/" rel="noopener" target="_blank">Tenement Museum</a>, Katz’s, Chinatown și Ferrara</p></div><div class="badge">5.500–7.000 pași</div></div>
 <ul>
 <li><span class="time">10:15–10:30</span> — sosire la Visitor Center, 103 Orchard Street.</li>
-<li><span class="time">10:30–11:45</span> — un singur tur ghidat la Tenement Museum.</li>
-<li><span class="time">11:50–13:15</span> — prânz la Katz’s Delicatessen.</li>
+<li><span class="time">10:30–11:45</span> — un singur tur ghidat la <a class="text-link" href="https://www.tenement.org/" rel="noopener" target="_blank">Tenement Museum</a>.</li>
+<li><span class="time">11:50–13:15</span> — prânz la <a class="text-link" href="https://katzsdelicatessen.com/" rel="noopener" target="_blank">Katz’s Delicatessen</a>.</li>
 <li><span class="time">13:35–14:15</span> — Doyers, Pell și Mott Street; apoi Mulberry Street.</li>
-<li><span class="time">14:15–14:50</span> — desert la Ferrara Bakery &amp; Cafe.</li>
+<li><span class="time">14:15–14:50</span> — desert la <a class="text-link" href="https://www.ferraranyc.com/cafe/" rel="noopener" target="_blank">Ferrara Bakery &amp; Cafe</a>.</li>
 <li><span class="time">15:15–18:30</span> — pauză la hotel.</li>
 <li><span class="time">Seara</span> — liberă.</li>
 </ul>
-</article>
-
-<article class="day">
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🏠 Tenement Museum</h4><p>Muzeul a fost fondat în 1988 și spune istoria imigrației prin viețile familiilor care au locuit în clădiri reale de pe Orchard Street. La 103 Orchard, construită în 1888, au trăit de-a lungul timpului peste 10.000 de oameni. Un tur ghidat are mai mult sens aici decât o vizită rapidă.</p><div class="actions"><a class="btn" href="https://www.tenement.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Tenement+Museum+103+Orchard+Street+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🥪 Katz’s Delicatessen</h4><p>Katz’s funcționează din 1888 și este unul dintre cele mai cunoscute deli-uri istorice ale Lower East Side. Pentru ziua aceasta, rolul lui este chiar prânzul — nu încă un obiectiv separat.</p><div class="actions"><a class="btn" href="https://katzsdelicatessen.com/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Katz%27s+Delicatessen+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🥟 Chinatown</h4><p>Doyers, Pell și Mott Street formează o plimbare compactă printr-o parte din nucleul istoric al Chinatown-ului. Observă densitatea, firmele, scările de incendiu și schimbarea foarte rapidă de atmosferă față de Lower East Side.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Doyers+Street+Pell+Street+Mott+Street+Chinatown+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🍰 Ferrara Bakery &amp; Cafe</h4><p>Ferrara datează din 1892 și se prezintă drept prima pasticceria și espresso bar din America. Este un final potrivit pentru traseul prin Little Italy, fără să adaugi încă o vizită lungă.</p><div class="actions"><a class="btn" href="https://www.ferraranyc.com/cafe/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Ferrara+Bakery+Cafe+195+Grand+Street+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-17">
 <div class="day-head"><div><h3>Vineri, 17 septembrie</h3><p>NoHo și Merchant’s House</p></div><div class="badge">4.500–6.500 pași</div></div>
 <ul>
 <li><span class="time">11:00–11:45</span> — NoHo: Bond Street și Great Jones Street.</li>
-<li><span class="time">12:00–13:15</span> — tur ghidat Merchant’s House Museum.</li>
+<li><span class="time">12:00–13:15</span> — tur ghidat <a class="text-link" href="https://merchantshouse.org/" rel="noopener" target="_blank">Merchant’s House Museum</a>.</li>
 <li><span class="time">13:15–14:15</span> — prânz în NoHo sau East Village.</li>
 <li><span class="time">14:30–17:30</span> — pauză lungă la hotel.</li>
 <li><span class="time">19:00</span> — cină în Village.</li>
 </ul>
-</article>
-
-<article class="day">
-<div class="day-head"><div><h3>Sâmbătă, 18 septembrie</h3><p>The Met Cloisters și Fort Tryon Park</p></div><div class="badge">6.000–7.500 pași</div></div>
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🏛️ Merchant’s House Museum</h4><p>Casa a fost construită în 1832 și cumpărată de familia Tredwell în 1835. Membrii familiei și servitorii lor au locuit aici aproape un secol, iar muzeul s-a deschis în 1936. Valoarea principală este autenticitatea: interioare, mobilier și obiecte familiale păstrate în aceeași casă.</p><div class="actions"><a class="btn" href="https://merchantshouse.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Merchant%27s+House+Museum+29+East+4th+Street+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🏙️ NoHo</h4><p>NoHo păstrează o combinație de clădiri comerciale, lofturi și case din secolul al XIX-lea. Bond Street și Great Jones Street sunt bune pentru arhitectură și pentru contrastul dintre vechiul Manhattan industrial și cartierul actual.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Bond+Street+Great+Jones+Street+NoHo+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-18">
+<div class="day-head"><div><h3>Sâmbătă, 18 septembrie</h3><p><a class="text-link" href="https://www.metmuseum.org/plan-your-visit/met-cloisters" rel="noopener" target="_blank">The Met Cloisters</a> și Fort Tryon Park</p></div><div class="badge">6.000–7.500 pași</div></div>
 <ul>
 <li><span class="time">09:45–10:25</span> — metrou A până la 190 St, apoi mers prin Fort Tryon Park.</li>
-<li><span class="time">10:30–12:30</span> — The Met Cloisters.</li>
+<li><span class="time">10:30–12:30</span> — <a class="text-link" href="https://www.metmuseum.org/plan-your-visit/met-cloisters" rel="noopener" target="_blank">The Met Cloisters</a>.</li>
 <li><span class="time">12:30–13:30</span> — prânz la cafeneaua muzeului sau lângă stație.</li>
 <li><span class="time">14:30–17:30</span> — pauză la hotel.</li>
-<li><span class="time">Seara, opțional</span> — apus la Little Island, dacă aveți chef.</li>
+<li><span class="time">Seara, opțional</span> — apus la <a class="text-link" href="https://littleisland.org/" rel="noopener" target="_blank">Little Island</a>, dacă aveți chef.</li>
 </ul>
-</article>
-
-<article class="day">
-<div class="day-head"><div><h3>Duminică, 19 septembrie</h3><p>Intrepid Museum și Hell’s Kitchen</p></div><div class="badge">Zi lejeră</div></div>
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>🏰 The Met Cloisters</h4><p>Deschis în 1938 ca filială a Metropolitan Museum of Art, este dedicat artei și arhitecturii Europei medievale. Clădirea modernă integrează elemente provenite din cinci claustre medievale, astfel încât arhitectura face parte din experiență la fel de mult ca obiectele expuse.</p><div class="actions"><a class="btn" href="https://www.metmuseum.org/plan-your-visit/met-cloisters" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=The+Met+Cloisters+99+Margaret+Corbin+Drive+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🌲 Fort Tryon Park</h4><p>John D. Rockefeller Jr. a oferit terenul orașului, iar parcul a fost proiectat de firma Olmsted Brothers și amenajat în anii 1930. Traseul spre Cloisters face parte din vizită: Hudsonul și Palisades apar printre copaci.</p><div class="actions"><a class="btn" href="https://www.nycgovparks.org/parks/fort-tryon-park" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Fort+Tryon+Park+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🌇 Little Island · opțional seara</h4><p>Parcul de la Pier 55 s-a deschis în 2021 și este construit pe „lalele” structurale ridicate deasupra Hudsonului. Este mai degrabă o oprire de atmosferă și arhitectură decât o destinație care cere mult timp.</p><div class="actions"><a class="btn" href="https://littleisland.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Little+Island+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-19">
+<div class="day-head"><div><h3>Duminică, 19 septembrie</h3><p><a class="text-link" href="https://intrepidmuseum.org/" rel="noopener" target="_blank">Intrepid Museum</a> și Hell’s Kitchen</p></div><div class="badge">Zi lejeră</div></div>
 <ul>
 <li><span class="time">09:15–10:00</span> — plecare de la hotel spre Pier 86, pe Hudson.</li>
-<li><span class="time">10:00–13:00</span> — Intrepid Museum: portavionul USS Intrepid, Space Shuttle Enterprise, submarinul Growler și avioanele de pe punte.</li>
+<li><span class="time">10:00–13:00</span> — <a class="text-link" href="https://intrepidmuseum.org/" rel="noopener" target="_blank">Intrepid Museum</a>: portavionul USS Intrepid, Space Shuttle Enterprise, submarinul Growler și avioanele de pe punte.</li>
 <li><span class="time">13:00–14:00</span> — prânz în Hell’s Kitchen, fără alt obiectiv.</li>
 <li><span class="time">14:00–14:30</span> — întoarcere la hotel.</li>
 <li><span class="time">14:30–17:30</span> — pauză și pregătirea bagajelor.</li>
 <li><span class="time">19:00</span> — ultima cină într-un loc preferat din Village.</li>
 </ul>
 <p class="small">Programul și tarifele Intrepid trebuie reverificate pentru septembrie 2027. Biletul general include în prezent portavionul, Space Shuttle Pavilion și submarinul Growler.</p>
-</article>
-
-<article class="day">
+<details class="day-notes"><summary>Despre locurile de azi</summary><div class="story-grid"><div class="story"><h4>⚓ USS Intrepid</h4><p>Portavionul a intrat în serviciu în 1943, a supraviețuit atacurilor kamikaze și unei lovituri de torpilă în Al Doilea Război Mondial, apoi a servit în Războiul Rece, Vietnam și ca navă de recuperare pentru misiuni NASA. Astăzi este piesa centrală a muzeului.</p><div class="actions"><a class="btn" href="https://intrepidmuseum.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Intrepid+Museum+Pier+86+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🚀 Enterprise &amp; Growler</h4><p>Space Shuttle Enterprise este expus în pavilionul dedicat navetei spațiale. Submarinul Growler oferă o perspectivă foarte diferită asupra tehnologiei Războiului Rece; accesul lui poate avea coadă și se poate închide mai devreme.</p><div class="actions"><a class="btn" href="https://intrepidmuseum.org/" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Intrepid+Museum+Pier+86+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div><div class="story"><h4>🍽️ Hell’s Kitchen</h4><p>Zona de la vest de Midtown a fost mult timp legată de docuri, industrie și comunități muncitorești. Astăzi este dens rezidențială și plină de restaurante — potrivită pentru prânz după muzeu, fără ocol mare.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Hell%27s+Kitchen+New+York" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
+<article class="day" id="zi-20">
 <div class="day-head"><div><h3>Luni, 20 septembrie</h3><p>Plecare</p></div><div class="badge">Zi de transfer</div></div>
 <ul>
 <li><span class="time">Dimineața</span> — mic dejun, bagaje, check-out și verificarea documentelor.</li>
 <li><span class="time">Transfer</span> — taxi spre aeroport cu rezervă suficientă pentru traficul de luni.</li>
 <li>Nu se planifică muzeu sau deplasare lungă.</li>
 </ul>
-</article>
+<details class="day-notes"><summary>Informație practică</summary><div class="story-grid"><div class="story"><h4>✈️ Zi de transfer</h4><p>Nu adăugăm obiective. Păstrăm marjă pentru trafic, bagaje și formalități; tariful oficial pentru taxi între JFK și Manhattan trebuie verificat înainte de plecare.</p><div class="actions"><a class="btn" href="https://www.nyc.gov/site/tlc/passengers/taxi-fare.page" rel="noopener" target="_blank">Site oficial ↗</a><a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=John+F+Kennedy+International+Airport" rel="noopener" target="_blank">Google Maps ↗</a></div></div></div></details></article>
 </section>
-
 <section id="buget">
 <h2>Buget de lucru pentru doi</h2>
 <div class="budget">
-<div><b>Zboruri dus-întors</b><br>2.160 USD</div>
-<div><b>Hotel · 9 nopți</b><br>4.400 USD</div>
-<div><b>Mese și cafenele</b><br>1.980 USD</div>
-<div><b>Broadway</b><br>400 USD</div>
-<div><b>Cinci muzee / atracții</b><br>306 USD</div>
-<div><b>Transport local + aeroport</b><br>380 USD</div>
-<div><b>Asigurare medicală</b><br>215 USD</div>
-<div><b>Rezervă</b><br>885 USD</div>
+<div><b>Zboruri dus-întors</b><br/>2.160 USD</div>
+<div><b>Hotel · 9 nopți</b><br/>4.400 USD</div>
+<div><b>Mese și cafenele</b><br/>1.980 USD</div>
+<div><b>Broadway</b><br/>400 USD</div>
+<div><b>Cinci muzee / atracții</b><br/>306 USD</div>
+<div><b>Transport local + aeroport</b><br/>380 USD</div>
+<div><b>Asigurare medicală</b><br/>215 USD</div>
+<div><b>Rezervă</b><br/>885 USD</div>
 </div>
 <p><b>Total plafon actualizat:</b> aproximativ 10.726 USD, adică circa <b>9.420 €</b> la cursul de lucru folosit în program.</p>
 <p class="small">Estimarea este orientativă; hotelul și zborurile pot schimba cel mai mult totalul.</p>
 </section>
-
 <section id="verificari">
 <h2>De verificat înainte de rezervare</h2>
 <div class="overview">
@@ -222,8 +230,8 @@ ul{padding-left:1.2rem}
 <div class="card"><h3>Tenement</h3><p>Alegeți un tur de dimineață când apare calendarul 2027.</p></div>
 <div class="card"><h3>Merchant’s House</h3><p>Confirmați turul ghidat, accesul și eventualele lucrări de restaurare.</p></div>
 <div class="card"><h3>Cloisters</h3><p>Confirmați programul și eventualele modificări de tarif.</p></div>
-<div class="card"><h3>Intrepid Museum</h3><p>Confirmați programul și tariful pentru duminică, 19 septembrie 2027.</p></div>
-<div class="card"><h3>Broadway</h3><p>Titlul, teatrul și ora rămân de ales.</p></div>
+<div class="card"><h3><a class="text-link" href="https://intrepidmuseum.org/" rel="noopener" target="_blank">Intrepid Museum</a></h3><p>Confirmați programul și tariful pentru duminică, 19 septembrie 2027.</p></div>
+<div class="card"><h3><a class="text-link" href="https://www.broadway.org/shows" rel="noopener" target="_blank">Broadway</a></h3><p>Titlul, teatrul și ora rămân de ales.</p></div>
 <div class="card"><h3>Hotel</h3><p>Comparați tariful pentru toate cele 9 nopți, cu toate taxele incluse.</p></div>
 <div class="card"><h3>Asigurare</h3><p>Cumpărați polița pentru întreaga perioadă 11–20 septembrie.</p></div>
 </div>
